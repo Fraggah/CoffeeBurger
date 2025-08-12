@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk4dhot315a2i"]
+
+[ext_resource type="PackedScene" uid="uid://du71t5pw0eb2t" path="res://Scenes/Cashier/cashier.tscn" id="1_uci67"]
+[ext_resource type="Script" uid="uid://blmhfainn46xd" path="res://Scenes/Customer/customer.gd" id="2_b53n7"]
+[ext_resource type="Texture2D" uid="uid://rwvc31rg8nyd" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/circle.png" id="3_yq8ln"]
+[ext_resource type="Texture2D" uid="uid://dc1chaqdty1b8" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/Coffee.png" id="4_xnbkp"]
+[ext_resource type="FontFile" uid="uid://fkmtg2y181q" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Fonts/Bake Soda.otf" id="5_nmlg2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_acsmi"]
+font = ExtResource("5_nmlg2")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="Customer" instance=ExtResource("1_uci67")]
+script = ExtResource("2_b53n7")
+
+[node name="Body" parent="Visuals" index="1"]
+unique_name_in_owner = true
+
+[node name="Face" parent="Visuals" index="2"]
+unique_name_in_owner = true
+
+[node name="HandLeft" parent="Visuals" index="3"]
+unique_name_in_owner = true
+
+[node name="HandRight" parent="Visuals" index="4"]
+unique_name_in_owner = true
+
+[node name="ItemBox" type="Control" parent="." index="2"]
+visible = false
+z_index = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -99.0
+offset_top = -144.0
+offset_right = 1.0
+offset_bottom = -44.0
+
+[node name="BG" type="TextureRect" parent="ItemBox" index="0"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_yq8ln")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemImg" type="TextureRect" parent="ItemBox/BG" index="0"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 19.0
+offset_right = 66.0
+offset_bottom = 79.0
+texture = ExtResource("4_xnbkp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemLabel" type="Label" parent="ItemBox/BG" index="1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 56.0
+offset_top = 35.0
+offset_right = 96.0
+offset_bottom = 84.0
+text = "3"
+label_settings = SubResource("LabelSettings_acsmi")

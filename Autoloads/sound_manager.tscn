@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx6ly218f3bc4"]
+
+[ext_resource type="Script" uid="uid://bdqihgkkexm5v" path="res://Autoloads/sound_manager.gd" id="1_u5vrn"]
+[ext_resource type="AudioStream" uid="uid://r513p00qdr0k" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sound/theme.mp3" id="2_u5vrn"]
+
+[node name="SoundManager" type="Node" node_paths=PackedStringArray("stream_players")]
+script = ExtResource("1_u5vrn")
+stream_players = [NodePath("AudioStreamPlayer2D2"), NodePath("AudioStreamPlayer2D3"), NodePath("AudioStreamPlayer2D4"), NodePath("AudioStreamPlayer2D5"), NodePath("AudioStreamPlayer2D6")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_u5vrn")
+volume_db = -22.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="AudioStreamPlayer2D6" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

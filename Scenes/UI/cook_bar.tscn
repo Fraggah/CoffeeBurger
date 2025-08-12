@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://hhbkpxe5721s"]
+
+[ext_resource type="Script" uid="uid://6ivyvs4hcfj3" path="res://Scenes/UI/cook_bar.gd" id="1_73lfo"]
+[ext_resource type="Texture2D" uid="uid://ctma2cco3pyjn" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/pb_circle.png" id="1_jducn"]
+[ext_resource type="Texture2D" uid="uid://cjmr7qh0ra723" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/pg_outline.png" id="2_73lfo"]
+
+[node name="CookBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_73lfo")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 1.0
+step = 0.01
+fill_mode = 4
+texture_under = ExtResource("1_jducn")
+texture_over = ExtResource("2_73lfo")
+texture_progress = ExtResource("1_jducn")
+tint_under = Color(0, 0, 0, 1)
+tint_progress = Color(0.451486, 0.477627, 0.352091, 1)

@@ -1,0 +1,204 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4jmpj60spsf5"]
+
+[ext_resource type="LabelSettings" uid="uid://b5pt41exfs8jl" path="res://label_48_black.tres" id="1_1gneo"]
+[ext_resource type="Script" uid="uid://ctlk18aqynkq7" path="res://Scenes/UI/upgraded_panel.gd" id="1_o10iw"]
+[ext_resource type="FontFile" uid="uid://fkmtg2y181q" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Fonts/Bake Soda.otf" id="2_o10iw"]
+[ext_resource type="Texture2D" uid="uid://dy3m5bimnck5c" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/star.png" id="3_vrbql"]
+[ext_resource type="Texture2D" uid="uid://dbm08lygf38oj" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/coin_gold.png" id="4_xhvwc"]
+[ext_resource type="Texture2D" uid="uid://dc28bg5qri10a" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/contrast.png" id="5_gsggo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_he4f5"]
+bg_color = Color(0.807843, 0.807843, 0.807843, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sdchi"]
+font = ExtResource("2_o10iw")
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swq4m"]
+bg_color = Color(0.299547, 0.299547, 0.299547, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6gc8"]
+bg_color = Color(0.0156863, 0.584314, 0.835294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujcqm"]
+bg_color = Color(2.88785e-07, 0.700208, 0.57901, 1)
+
+[node name="UpgradedPanel" type="Control"]
+custom_minimum_size = Vector2(550, 650)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -530.0
+offset_bottom = -1270.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o10iw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_he4f5")
+
+[node name="Level" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.5
+offset_top = 20.0
+offset_right = 54.5
+offset_bottom = 78.0
+grow_horizontal = 2
+text = "LV. 0"
+label_settings = ExtResource("1_1gneo")
+
+[node name="ItemName" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 110.0
+offset_right = 90.0
+offset_bottom = 168.0
+grow_horizontal = 2
+text = "COFFEE"
+label_settings = SubResource("LabelSettings_sdchi")
+
+[node name="StarHBox" type="HBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -117.0
+offset_right = 184.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Star_1" type="TextureRect" parent="Panel/StarHBox"]
+modulate = Color(0.26779, 0.26779, 0.26779, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_vrbql")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star_2" type="TextureRect" parent="Panel/StarHBox"]
+modulate = Color(0.26779, 0.26779, 0.26779, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_vrbql")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star_3" type="TextureRect" parent="Panel/StarHBox"]
+modulate = Color(0.26779, 0.26779, 0.26779, 1)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture = ExtResource("3_vrbql")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(420, 36)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 347.0
+offset_right = 483.0
+offset_bottom = 383.0
+theme_override_styles/background = SubResource("StyleBoxFlat_swq4m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x6gc8")
+max_value = 1.0
+show_percentage = false
+
+[node name="ProfitHBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 397.0
+offset_right = 143.0
+offset_bottom = 455.0
+theme_override_constants/separation = 15
+
+[node name="TextureRect" type="TextureRect" parent="Panel/ProfitHBox"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("4_xhvwc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Profit" type="Label" parent="Panel/ProfitHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+label_settings = ExtResource("1_1gneo")
+
+[node name="TimeHBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 397.0
+offset_right = 491.0
+offset_bottom = 461.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/TimeHBox"]
+modulate = Color(1, 0.309804, 1, 1)
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_gsggo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CookTime" type="Label" parent="Panel/TimeHBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "10s"
+label_settings = ExtResource("1_1gneo")
+
+[node name="UpgradeButton" type="Button" parent="Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 115)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -70.0
+offset_right = 13.5
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_o10iw")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_ujcqm")
+text = "50"
+
+[connection signal="pressed" from="Panel/UpgradeButton" to="." method="_on_upgrade_button_pressed"]

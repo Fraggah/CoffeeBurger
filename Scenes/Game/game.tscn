@@ -1,0 +1,704 @@
+[gd_scene load_steps=37 format=3 uid="uid://c5oo32jcjqr8"]
+
+[ext_resource type="Texture2D" uid="uid://7aq4ian2ynym" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/Bakground.png" id="1_i1e5p"]
+[ext_resource type="Texture2D" uid="uid://brgvemnaqgm3g" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/Counter.png" id="2_ciybh"]
+[ext_resource type="Texture2D" uid="uid://bvsiepjbuf38o" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/Counter_half.png" id="3_flgk0"]
+[ext_resource type="Texture2D" uid="uid://dc1chaqdty1b8" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/Coffee.png" id="4_56qi8"]
+[ext_resource type="PackedScene" uid="uid://du71t5pw0eb2t" path="res://Scenes/Cashier/cashier.tscn" id="4_vifcx"]
+[ext_resource type="Texture2D" uid="uid://c51v74j7l5wo4" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/Burger.png" id="5_2vowc"]
+[ext_resource type="Script" uid="uid://ncs0883rjb4x" path="res://Scenes/Manager/customer_manager.gd" id="5_ciybh"]
+[ext_resource type="Script" uid="uid://bpffjy2gyb8xf" path="res://data/customer_data.gd" id="6_qtymf"]
+[ext_resource type="Resource" uid="uid://b5rhc8w7m4guj" path="res://data/customerr_pink.tres" id="7_ypmwd"]
+[ext_resource type="Resource" uid="uid://dl0slmktixwl5" path="res://data/customer_green.tres" id="8_oejk7"]
+[ext_resource type="Resource" uid="uid://b603g2f4rau4b" path="res://data/customer_purple.tres" id="9_upfqs"]
+[ext_resource type="Resource" uid="uid://dcbbio1xpqf4m" path="res://data/customer_red.tres" id="10_8e3kh"]
+[ext_resource type="Resource" uid="uid://n7wvegii3on1" path="res://data/customer_yellow.tres" id="11_56qi8"]
+[ext_resource type="PackedScene" uid="uid://dk4dhot315a2i" path="res://Scenes/Customer/customer.tscn" id="12_ypmwd"]
+[ext_resource type="Script" uid="uid://chxbbr3mxctox" path="res://Scenes/Manager/counter_manager.gd" id="13_oejk7"]
+[ext_resource type="Script" uid="uid://dnfirrsvkajnq" path="res://Scenes/Manager/cashier_manager.gd" id="13_upfqs"]
+[ext_resource type="Script" uid="uid://cbgvt8i78wvxs" path="res://Scenes/Game/game_ui.gd" id="17_yox4t"]
+[ext_resource type="PackedScene" uid="uid://c4jmpj60spsf5" path="res://Scenes/UI/upgraded_panel.tscn" id="18_lemb1"]
+[ext_resource type="Texture2D" uid="uid://cqfa1eu8d1si" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/Arrow.png" id="19_lemb1"]
+[ext_resource type="Texture2D" uid="uid://dbm08lygf38oj" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/coin_gold.png" id="20_nxex1"]
+[ext_resource type="FontFile" uid="uid://fkmtg2y181q" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Fonts/Bake Soda.otf" id="21_pa3qg"]
+[ext_resource type="Texture2D" uid="uid://b6vbv8qupj1r7" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/arrowUp.png" id="22_2lc0x"]
+[ext_resource type="Texture2D" uid="uid://jf60677t635w" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/Characters/face_a.png" id="22_pa3qg"]
+[ext_resource type="Texture2D" uid="uid://btswnpqgasrro" path="res://Idle+Tycoon+Assets/Idle Tycoon Assets/Sprites/UI/gear.png" id="23_4ti5a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2lc0x"]
+font = ExtResource("21_pa3qg")
+font_size = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ti5a"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lc0x"]
+bg_color = Color(0.817521, 0.817521, 0.817521, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ti5a"]
+font = ExtResource("21_pa3qg")
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmm7v"]
+bg_color = Color(0.309804, 0.643137, 0.843137, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gqeb"]
+font = ExtResource("21_pa3qg")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pdpw"]
+bg_color = Color(0.137255, 0.592157, 0, 1)
+shadow_size = 4
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gqeb"]
+bg_color = Color(0.231518, 0.231518, 0.231518, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_7pdpw"]
+font = ExtResource("21_pa3qg")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_pmm7v"]
+font = ExtResource("21_pa3qg")
+font_size = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqd4u"]
+bg_color = Color(0.1834, 0.713932, 0.301598, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1l3pd"]
+bg_color = Color(0.388036, 0.581566, 1, 1)
+
+[node name="Game" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+texture = ExtResource("1_i1e5p")
+centered = false
+
+[node name="MainCounter" type="Sprite2D" parent="."]
+position = Vector2(537, 855)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_ciybh")
+
+[node name="CoffeeCounter" type="Sprite2D" parent="."]
+position = Vector2(416, 1382)
+scale = Vector2(0.8, 0.9)
+texture = ExtResource("3_flgk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="CoffeeCounter"]
+position = Vector2(-75, -58.8889)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_56qi8")
+
+[node name="BurgerCounter" type="Sprite2D" parent="."]
+position = Vector2(657, 1382)
+scale = Vector2(0.8, 0.9)
+texture = ExtResource("3_flgk0")
+
+[node name="Sprite2D" type="Sprite2D" parent="BurgerCounter"]
+position = Vector2(-57.5, -62.2222)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2vowc")
+
+[node name="CustomerManager" type="Node" parent="." node_paths=PackedStringArray("spawn_positions")]
+script = ExtResource("5_ciybh")
+spawn_positions = [NodePath("TopSpawnPos"), NodePath("BottomSpawnPos")]
+customer_sprites = Array[ExtResource("6_qtymf")]([ExtResource("7_ypmwd"), ExtResource("8_oejk7"), ExtResource("9_upfqs"), ExtResource("10_8e3kh"), ExtResource("11_56qi8")])
+customer_scene = ExtResource("12_ypmwd")
+
+[node name="TopSpawnPos" type="Marker2D" parent="CustomerManager"]
+position = Vector2(-129, 180)
+
+[node name="BottomSpawnPos" type="Marker2D" parent="CustomerManager"]
+position = Vector2(-129, 621)
+
+[node name="SpawnTimer" type="Timer" parent="CustomerManager"]
+wait_time = 3.5
+autostart = true
+
+[node name="CounterManager" type="Node" parent="." node_paths=PackedStringArray("counter_positions")]
+unique_name_in_owner = true
+script = ExtResource("13_oejk7")
+counter_positions = [NodePath("Pos_0"), NodePath("Pos_1"), NodePath("Pos_2"), NodePath("Pos_3")]
+
+[node name="Pos_0" type="Marker2D" parent="CounterManager"]
+position = Vector2(370, 740)
+
+[node name="Pos_1" type="Marker2D" parent="CounterManager"]
+position = Vector2(480, 740)
+
+[node name="Pos_2" type="Marker2D" parent="CounterManager"]
+position = Vector2(590, 740)
+
+[node name="Pos_3" type="Marker2D" parent="CounterManager"]
+position = Vector2(700, 738)
+
+[node name="CashierManager" type="Node" parent="." node_paths=PackedStringArray("spawn_pos")]
+script = ExtResource("13_upfqs")
+cashier_scene = ExtResource("4_vifcx")
+spawn_pos = NodePath("SpawnPos")
+
+[node name="SpawnPos" type="Marker2D" parent="CashierManager"]
+position = Vector2(518, 1110)
+
+[node name="GameUI" type="CanvasLayer" parent="."]
+script = ExtResource("17_yox4t")
+
+[node name="CoffeeUpgradePanel" parent="GameUI" instance=ExtResource("18_lemb1")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -430.0
+offset_right = 275.0
+offset_bottom = 220.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="BurgerUpgradePanel" parent="GameUI" instance=ExtResource("18_lemb1")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -430.0
+offset_right = 275.0
+offset_bottom = 220.0
+
+[node name="CoffeeButton" type="TextureButton" parent="GameUI"]
+offset_left = 432.0
+offset_top = 1318.0
+offset_right = 496.0
+offset_bottom = 1382.0
+texture_normal = ExtResource("19_lemb1")
+
+[node name="BurgerButton" type="TextureButton" parent="GameUI"]
+offset_left = 676.0
+offset_top = 1318.0
+offset_right = 740.0
+offset_bottom = 1382.0
+texture_normal = ExtResource("19_lemb1")
+
+[node name="TopBar" type="Panel" parent="GameUI"]
+custom_minimum_size = Vector2(0, 96)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/TopBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -38.5
+offset_right = 54.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/TopBar/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("20_nxex1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CurrentCoins" type="Label" parent="GameUI/TopBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_2lc0x")
+
+[node name="BottomBar" type="Panel" parent="GameUI"]
+custom_minimum_size = Vector2(0, 96)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ti5a")
+
+[node name="ShopButton" type="Button" parent="GameUI/BottomBar"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -40.0
+offset_right = -10.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("22_2lc0x")
+icon_alignment = 1
+expand_icon = true
+
+[node name="OptionButton" type="Button" parent="GameUI/BottomBar"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -40.0
+offset_right = -99.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+icon = ExtResource("23_4ti5a")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Shop" type="Panel" parent="GameUI"]
+visible = false
+custom_minimum_size = Vector2(700, 1000)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -500.0
+offset_right = 350.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2lc0x")
+
+[node name="Label" type="Label" parent="GameUI/Shop"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.5
+offset_top = 12.0
+offset_right = 90.5
+offset_bottom = 89.0
+grow_horizontal = 2
+text = "SHOP"
+label_settings = SubResource("LabelSettings_4ti5a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Shop"]
+custom_minimum_size = Vector2(650, 850)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -325.0
+offset_top = -850.0
+offset_right = 325.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 15
+
+[node name="NewCashierCard_1" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmm7v")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -55.0
+offset_right = 125.0
+offset_bottom = 55.0
+grow_vertical = 2
+texture = ExtResource("22_pa3qg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -35.5
+offset_right = 117.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hire a new cashier
+Cashier + 1"
+label_settings = SubResource("LabelSettings_3gqeb")
+
+[node name="NewCashierButton_1" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_1"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -45.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_pa3qg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pdpw")
+text = "50"
+
+[node name="FasterCoffeeCard" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmm7v")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/FasterCoffeeCard"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -55.0
+offset_right = 125.0
+offset_bottom = 55.0
+grow_vertical = 2
+texture = ExtResource("4_56qi8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/FasterCoffeeCard"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -35.5
+offset_right = 117.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Better machine
+make coffee faster"
+label_settings = SubResource("LabelSettings_3gqeb")
+
+[node name="FasterCoffeeButton" type="Button" parent="GameUI/Shop/VBoxContainer/FasterCoffeeCard"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -45.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_pa3qg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pdpw")
+text = "50"
+
+[node name="NewCashierCard_2" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmm7v")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -55.0
+offset_right = 125.0
+offset_bottom = 55.0
+grow_vertical = 2
+texture = ExtResource("22_pa3qg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -35.5
+offset_right = 117.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hire a new cashier
+Cashier + 1"
+label_settings = SubResource("LabelSettings_3gqeb")
+
+[node name="NewCashierButton_2" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -45.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_pa3qg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pdpw")
+text = "50"
+
+[node name="FasterBurgerCard" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmm7v")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -55.0
+offset_right = 125.0
+offset_bottom = 55.0
+grow_vertical = 2
+texture = ExtResource("5_2vowc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -35.5
+offset_right = 117.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Better machine
+make burger faster"
+label_settings = SubResource("LabelSettings_3gqeb")
+
+[node name="FasterBurgerButton" type="Button" parent="GameUI/Shop/VBoxContainer/FasterBurgerCard"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -45.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_pa3qg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pdpw")
+text = "50"
+
+[node name="NewCashierCard_3" type="Panel" parent="GameUI/Shop/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pmm7v")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -55.0
+offset_right = 125.0
+offset_bottom = 55.0
+grow_vertical = 2
+texture = ExtResource("22_pa3qg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -35.5
+offset_right = 117.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hire a new cashier
+Cashier + 1"
+label_settings = SubResource("LabelSettings_3gqeb")
+
+[node name="NewCashierButton_3" type="Button" parent="GameUI/Shop/VBoxContainer/NewCashierCard_3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 90)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -45.0
+offset_right = -15.0
+offset_bottom = 45.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("21_pa3qg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pdpw")
+text = "50"
+
+[node name="Options" type="Panel" parent="GameUI"]
+visible = false
+custom_minimum_size = Vector2(650, 450)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -225.0
+offset_right = 325.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3gqeb")
+
+[node name="Title" type="Label" parent="GameUI/Options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.0
+offset_top = 20.0
+offset_right = 107.0
+offset_bottom = 78.0
+grow_horizontal = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_7pdpw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/Options"]
+custom_minimum_size = Vector2(550, 180)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -90.0
+offset_right = 275.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GameUI/Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Music"
+label_settings = SubResource("LabelSettings_pmm7v")
+
+[node name="MusicHSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_gqd4u")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameUI/Options/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameUI/Options/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "SFX"
+label_settings = SubResource("LabelSettings_pmm7v")
+
+[node name="SFXHSlider" type="HSlider" parent="GameUI/Options/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_1l3pd")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[connection signal="timeout" from="CustomerManager/SpawnTimer" to="CustomerManager" method="_on_spawn_timer_timeout"]
+[connection signal="pressed" from="GameUI/CoffeeButton" to="GameUI" method="_on_coffee_button_pressed"]
+[connection signal="pressed" from="GameUI/BurgerButton" to="GameUI" method="_on_burger_button_pressed"]
+[connection signal="pressed" from="GameUI/BottomBar/ShopButton" to="GameUI" method="_on_shop_button_pressed"]
+[connection signal="pressed" from="GameUI/BottomBar/OptionButton" to="GameUI" method="_on_option_button_pressed"]
+[connection signal="pressed" from="GameUI/Shop/VBoxContainer/NewCashierCard_1/NewCashierButton_1" to="GameUI" method="_on_new_cashier_button_1_pressed"]
+[connection signal="pressed" from="GameUI/Shop/VBoxContainer/FasterCoffeeCard/FasterCoffeeButton" to="GameUI" method="_on_faster_coffee_button_pressed"]
+[connection signal="pressed" from="GameUI/Shop/VBoxContainer/NewCashierCard_2/NewCashierButton_2" to="GameUI" method="_on_new_cashier_button_2_pressed"]
+[connection signal="pressed" from="GameUI/Shop/VBoxContainer/FasterBurgerCard/FasterBurgerButton" to="GameUI" method="_on_faster_burger_button_pressed"]
+[connection signal="pressed" from="GameUI/Shop/VBoxContainer/NewCashierCard_3/NewCashierButton_3" to="GameUI" method="_on_new_cashier_button_3_pressed"]
+[connection signal="value_changed" from="GameUI/Options/VBoxContainer/HBoxContainer2/MusicHSlider" to="GameUI" method="_on_music_h_slider_value_changed"]
+[connection signal="value_changed" from="GameUI/Options/VBoxContainer/HBoxContainer/SFXHSlider" to="GameUI" method="_on_sfxh_slider_value_changed"]
